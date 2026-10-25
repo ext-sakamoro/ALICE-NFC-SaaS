@@ -19,7 +19,7 @@ services:
       - CORE_ENGINE_URL=http://core-engine:8081
       - SUPABASE_URL=${SUPABASE_URL}
       - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
-      - JWT_SECRET=${JWT_SECRET}
+      - JWT_SECRET=${JWT_SECRET:?}
       - FRONTEND_URL=http://frontend:3000
     depends_on: [core-engine]
     networks: [alice-nfc-net]
